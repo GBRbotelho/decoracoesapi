@@ -265,6 +265,7 @@ const mpController = {
     }
   },
   async createSubscriptionstar4(req, res) {
+    //TEst
     try {
       // Dados recebidos do cliente
       const { payer, token, dataUser } = req.body;
