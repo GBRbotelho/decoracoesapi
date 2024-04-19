@@ -334,6 +334,216 @@ const mpController = {
     }
   },
 
+  async createSubscriptionstar6(req, res) {
+    //TEst
+    try {
+      // Dados recebidos do cliente
+      const { payer, token, dataUser } = req.body;
+
+      // Dados da requisição POST para a API do Mercado Pago
+      const data = {
+        preapproval_plan_id: "2c9380848ef3876b018ef82556560365",
+        reason: "Box Star 6 Lugar",
+        external_reference: dataUser.cpf,
+        payer_email: payer.email,
+        card_token_id: token,
+        auto_recurring: {
+          frequency: 1,
+          frequency_type: "months",
+          transaction_amount: 89.9,
+          currency_id: "BRL",
+        },
+        back_url: "https://www.yoursite.com",
+        status: "authorized",
+      };
+
+      // Faz a requisição POST para criar a assinatura
+      const response = await axios.post(
+        "https://api.mercadopago.com/preapproval",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${mercadoPagoAccessToken}`,
+          },
+        }
+      );
+
+      const dataClient = {
+        nome: dataUser.nome,
+        cpf: dataUser.cpf,
+        sobrenome: dataUser.sobrenome,
+        ddd: dataUser.ddd,
+        telefone: dataUser.telefone,
+        rua: dataUser.rua,
+        bairro: dataUser.bairro,
+        numero: dataUser.numero,
+        cidade: dataUser.cidade,
+        estado: dataUser.estado,
+        cep: dataUser.cep,
+        email: payer.email,
+        idAssinatura: response.data.id,
+      };
+
+      if (response.data.status === "authorized") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "authorized", data: response.data });
+      } else if (response.data.status === "pending") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "pending", data: response.data });
+      } else {
+        return res.status(500).json({ success: "NO", data: response.data });
+      }
+    } catch (error) {
+      console.error("Erro ao criar a assinatura:", error);
+      return res.status(500).json({ success: "NO", data: error });
+    }
+  },
+
+  async createSubscriptionstar8(req, res) {
+    //TEst
+    try {
+      // Dados recebidos do cliente
+      const { payer, token, dataUser } = req.body;
+
+      // Dados da requisição POST para a API do Mercado Pago
+      const data = {
+        preapproval_plan_id: "2c9380848ef387c7018ef825b0750380",
+        reason: "Box Star 8 Lugar",
+        external_reference: dataUser.cpf,
+        payer_email: payer.email,
+        card_token_id: token,
+        auto_recurring: {
+          frequency: 1,
+          frequency_type: "months",
+          transaction_amount: 109.9,
+          currency_id: "BRL",
+        },
+        back_url: "https://www.yoursite.com",
+        status: "authorized",
+      };
+
+      // Faz a requisição POST para criar a assinatura
+      const response = await axios.post(
+        "https://api.mercadopago.com/preapproval",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${mercadoPagoAccessToken}`,
+          },
+        }
+      );
+
+      const dataClient = {
+        nome: dataUser.nome,
+        cpf: dataUser.cpf,
+        sobrenome: dataUser.sobrenome,
+        ddd: dataUser.ddd,
+        telefone: dataUser.telefone,
+        rua: dataUser.rua,
+        bairro: dataUser.bairro,
+        numero: dataUser.numero,
+        cidade: dataUser.cidade,
+        estado: dataUser.estado,
+        cep: dataUser.cep,
+        email: payer.email,
+        idAssinatura: response.data.id,
+      };
+
+      if (response.data.status === "authorized") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "authorized", data: response.data });
+      } else if (response.data.status === "pending") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "pending", data: response.data });
+      } else {
+        return res.status(500).json({ success: "NO", data: response.data });
+      }
+    } catch (error) {
+      console.error("Erro ao criar a assinatura:", error);
+      return res.status(500).json({ success: "NO", data: error });
+    }
+  },
+
+  async createSubscriptionstar12(req, res) {
+    //TEst
+    try {
+      // Dados recebidos do cliente
+      const { payer, token, dataUser } = req.body;
+
+      // Dados da requisição POST para a API do Mercado Pago
+      const data = {
+        preapproval_plan_id: "2c9380848ef38745018ef826039903ab",
+        reason: "Box Star 12 Lugares",
+        external_reference: dataUser.cpf,
+        payer_email: payer.email,
+        card_token_id: token,
+        auto_recurring: {
+          frequency: 1,
+          frequency_type: "months",
+          transaction_amount: 159.9,
+          currency_id: "BRL",
+        },
+        back_url: "https://www.yoursite.com",
+        status: "authorized",
+      };
+
+      // Faz a requisição POST para criar a assinatura
+      const response = await axios.post(
+        "https://api.mercadopago.com/preapproval",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${mercadoPagoAccessToken}`,
+          },
+        }
+      );
+
+      const dataClient = {
+        nome: dataUser.nome,
+        cpf: dataUser.cpf,
+        sobrenome: dataUser.sobrenome,
+        ddd: dataUser.ddd,
+        telefone: dataUser.telefone,
+        rua: dataUser.rua,
+        bairro: dataUser.bairro,
+        numero: dataUser.numero,
+        cidade: dataUser.cidade,
+        estado: dataUser.estado,
+        cep: dataUser.cep,
+        email: payer.email,
+        idAssinatura: response.data.id,
+      };
+
+      if (response.data.status === "authorized") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "authorized", data: response.data });
+      } else if (response.data.status === "pending") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "pending", data: response.data });
+      } else {
+        return res.status(500).json({ success: "NO", data: response.data });
+      }
+    } catch (error) {
+      console.error("Erro ao criar a assinatura:", error);
+      return res.status(500).json({ success: "NO", data: error });
+    }
+  },
+
   //Box Premium
   async createSubscriptionpremium4(req, res) {
     try {
@@ -420,6 +630,144 @@ const mpController = {
           frequency: 1,
           frequency_type: "months",
           transaction_amount: 249.9,
+          currency_id: "BRL",
+        },
+        back_url: "https://www.yoursite.com",
+        status: "authorized",
+      };
+
+      // Faz a requisição POST para criar a assinatura
+      const response = await axios.post(
+        "https://api.mercadopago.com/preapproval",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${mercadoPagoAccessToken}`,
+          },
+        }
+      );
+
+      const dataClient = {
+        nome: dataUser.nome,
+        cpf: dataUser.cpf,
+        sobrenome: dataUser.sobrenome,
+        ddd: dataUser.ddd,
+        telefone: dataUser.telefone,
+        rua: dataUser.rua,
+        bairro: dataUser.bairro,
+        numero: dataUser.numero,
+        cidade: dataUser.cidade,
+        estado: dataUser.estado,
+        cep: dataUser.cep,
+        email: payer.email,
+        idAssinatura: response.data.id,
+      };
+
+      if (response.data.status === "authorized") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "authorized", data: response.data });
+      } else if (response.data.status === "pending") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "pending", data: response.data });
+      } else {
+        return res.status(500).json({ success: "NO", data: response.data });
+      }
+    } catch (error) {
+      console.error("Erro ao criar a assinatura:", error);
+      return res.status(500).json({ success: "NO", data: error });
+    }
+  },
+
+  async createSubscriptionpremium8(req, res) {
+    try {
+      // Dados recebidos do cliente
+      const { payer, token, dataUser } = req.body;
+
+      // Dados da requisição POST para a API do Mercado Pago
+      const data = {
+        preapproval_plan_id: "2c9380848ef387c7018ef827a79c0384",
+        reason: "Box Premium 8 Lugares",
+        external_reference: dataUser.cpf,
+        payer_email: payer.email,
+        card_token_id: token,
+        auto_recurring: {
+          frequency: 1,
+          frequency_type: "months",
+          transaction_amount: 324.9,
+          currency_id: "BRL",
+        },
+        back_url: "https://www.yoursite.com",
+        status: "authorized",
+      };
+
+      // Faz a requisição POST para criar a assinatura
+      const response = await axios.post(
+        "https://api.mercadopago.com/preapproval",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${mercadoPagoAccessToken}`,
+          },
+        }
+      );
+
+      const dataClient = {
+        nome: dataUser.nome,
+        cpf: dataUser.cpf,
+        sobrenome: dataUser.sobrenome,
+        ddd: dataUser.ddd,
+        telefone: dataUser.telefone,
+        rua: dataUser.rua,
+        bairro: dataUser.bairro,
+        numero: dataUser.numero,
+        cidade: dataUser.cidade,
+        estado: dataUser.estado,
+        cep: dataUser.cep,
+        email: payer.email,
+        idAssinatura: response.data.id,
+      };
+
+      if (response.data.status === "authorized") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "authorized", data: response.data });
+      } else if (response.data.status === "pending") {
+        const CreatedClient = CreateClient(dataClient, clientRepository);
+        return res
+          .status(200)
+          .json({ success: "YES", status: "pending", data: response.data });
+      } else {
+        return res.status(500).json({ success: "NO", data: response.data });
+      }
+    } catch (error) {
+      console.error("Erro ao criar a assinatura:", error);
+      return res.status(500).json({ success: "NO", data: error });
+    }
+  },
+
+  async createSubscriptionpremium12(req, res) {
+    try {
+      // Dados recebidos do cliente
+      const { payer, token, dataUser } = req.body;
+
+      // Dados da requisição POST para a API do Mercado Pago
+      const data = {
+        preapproval_plan_id: "2c9380848ef38745018ef827f4d803ac",
+        reason: "Box Premium 12 Lugares",
+        external_reference: dataUser.cpf,
+        payer_email: payer.email,
+        card_token_id: token,
+        auto_recurring: {
+          frequency: 1,
+          frequency_type: "months",
+          transaction_amount: 455.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
