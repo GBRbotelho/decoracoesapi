@@ -1,0 +1,13 @@
+# Ignorar arquivos temporários
+*.tmp
+
+# Ignorar diretório "node_modules"
+node_modules/
+
+# Ignorar arquivos de build
+build/
+
+package-lock.json
+test.http
+config.js
+.env
