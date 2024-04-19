@@ -18,10 +18,14 @@ router.post(
 );
 router.post(
   "/create-subscription-premium6",
+  mpController.createSubscriptionpremium6
+);
+router.post(
+  "/create-subscription-premium8",
   mpController.createSubscriptionpremium8
 );
 router.post(
-  "/create-subscription-premium6",
+  "/create-subscription-premium12",
   mpController.createSubscriptionpremium12
 );
 
