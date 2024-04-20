@@ -6,10 +6,10 @@ router.post("/create-preapproval-plan", mpController.createPlan);
 router.post("/create-subscription/:id", mpController.createSubscription);
 router.post("/create-subscription-star2", mpController.createSubscriptionstar2);
 router.post("/create-subscription-star4", mpController.createSubscriptionstar4);
-router.post("/create-subscription-star4", mpController.createSubscriptionstar6);
-router.post("/create-subscription-star4", mpController.createSubscriptionstar8);
+router.post("/create-subscription-star6", mpController.createSubscriptionstar6);
+router.post("/create-subscription-star8", mpController.createSubscriptionstar8);
 router.post(
-  "/create-subscription-star4",
+  "/create-subscription-star12",
   mpController.createSubscriptionstar12
 );
 router.post(
