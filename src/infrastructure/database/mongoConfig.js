@@ -2,13 +2,12 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 // URL de conexão com o MongoDB
-const mongoURI =
-  process.env.MONGO_URI || "mongodb://localhost:27017/databaseapi";
+const mongoURI = process.env.MONGO_URI;
 
 // Função para conectar ao MongoDB
 const connectToMongoDB = async () => {
+  console.log("Conectando ao mongo");
   try {
-    console.log("Conectando ao mongo");
     console.log(mongoURI);
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
@@ -16,7 +15,7 @@ const connectToMongoDB = async () => {
     });
     console.log("Conexão com o MongoDB estabelecida com sucesso!");
   } catch (error) {
-    console.error("Erro ao conectar ao MongoDB:", error);
+    console.log("Erro ao conectar ao MongoDB:", error);
   }
 };
 
