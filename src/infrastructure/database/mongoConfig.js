@@ -7,6 +7,7 @@ const mongoURI =
 
 // Função para conectar ao MongoDB
 const connectToMongoDB = async () => {
+  console.log("Conectando ao mongo");
   try {
     console.log(mongoURI);
     await mongoose.connect(mongoURI, {
