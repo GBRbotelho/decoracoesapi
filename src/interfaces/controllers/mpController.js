@@ -211,7 +211,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 45.9,
+          transaction_amount: 39.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -280,7 +280,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 67.9,
+          transaction_amount: 59.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -350,7 +350,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 89.9,
+          transaction_amount: 79.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -420,7 +420,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 109.9,
+          transaction_amount: 99.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -490,7 +490,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 159.9,
+          transaction_amount: 139.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -560,7 +560,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 179.9,
+          transaction_amount: 119.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -629,7 +629,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 249.9,
+          transaction_amount: 162.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -698,7 +698,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 324.9,
+          transaction_amount: 204.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
@@ -767,7 +767,7 @@ const mpController = {
         auto_recurring: {
           frequency: 1,
           frequency_type: "months",
-          transaction_amount: 455.9,
+          transaction_amount: 292.9,
           currency_id: "BRL",
         },
         back_url: "https://www.yoursite.com",
