@@ -8,7 +8,6 @@ const mpController = {
   async createPlan(req, res) {
     try {
       //BOX STAR
-
       // const data = {
       //   auto_recurring: {
       //     frequency: 1,
@@ -19,7 +18,6 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Star 2 Lugares",
       // };
-
       // const data = {
       //   auto_recurring: {
       //     frequency: 1,
@@ -30,7 +28,6 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Star 4 Lugar",
       // };
-
       // const data = {
       //   auto_recurring: {
       //     frequency: 1,
@@ -41,7 +38,6 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Star 6 Lugar",
       // };
-
       // const data = {
       //   auto_recurring: {
       //     frequency: 1,
@@ -52,7 +48,6 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Star 8 Lugar",
       // };
-
       // const data = {
       //   auto_recurring: {
       //     frequency: 1,
@@ -63,7 +58,6 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Star 12 Lugares",
       // };
-
       //Box Premium
       // const data = {
       //   auto_recurring: {
@@ -75,7 +69,6 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Premium 4 Lugares",
       // };
-
       // const data = {
       //   auto_recurring: {
       //     frequency: 1,
@@ -86,7 +79,6 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Premium 6 Lugares",
       // };
-
       // const data = {
       //   auto_recurring: {
       //     frequency: 1,
@@ -97,32 +89,29 @@ const mpController = {
       //   back_url: "https://www.yoursite.com",
       //   reason: "Box Premium 8 Lugares",
       // };
-
-      const data = {
-        auto_recurring: {
-          frequency: 1,
-          frequency_type: "months",
-          transaction_amount: 455.9,
-          currency_id: "BRL",
-        },
-        back_url: "https://www.yoursite.com",
-        reason: "Box Premium 12 Lugares",
-      };
-
-      // Faz a requisição POST para criar o plano de assinatura
-      const response = await axios.post(
-        "https://api.mercadopago.com/preapproval_plan",
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${mercadoPagoAccessToken}`,
-          },
-        }
-      );
-
-      // Retorna a resposta da API do Mercado Pago
-      res.status(200).json(response.data);
+      // const data = {
+      //   auto_recurring: {
+      //     frequency: 1,
+      //     frequency_type: "months",
+      //     transaction_amount: 455.9,
+      //     currency_id: "BRL",
+      //   },
+      //   back_url: "https://www.yoursite.com",
+      //   reason: "Box Premium 12 Lugares",
+      // };
+      // // Faz a requisição POST para criar o plano de assinatura
+      // const response = await axios.post(
+      //   "https://api.mercadopago.com/preapproval_plan",
+      //   data,
+      //   {
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       Authorization: `Bearer ${mercadoPagoAccessToken}`,
+      //     },
+      //   }
+      // );
+      // // Retorna a resposta da API do Mercado Pago
+      // res.status(200).json(response.data);
     } catch (error) {
       return res.status(500).json({ error: error });
     }
@@ -178,13 +167,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -246,13 +235,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -315,13 +304,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -455,13 +444,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -525,13 +514,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -595,13 +584,14 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
+
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -664,13 +654,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -733,13 +723,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
