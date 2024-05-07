@@ -5,6 +5,7 @@ const clientController = {
   async create(req, res) {
     try {
       const CreatedClient = await CreateClient(req.body, clientRepository);
+      console.log(CreatedClient);
 
       return res.status(201).json(CreatedClient);
     } catch (error) {
