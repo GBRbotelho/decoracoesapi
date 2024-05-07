@@ -12,7 +12,8 @@ class Client {
     estado,
     cep,
     email,
-    idAssinatura
+    idAssinatura,
+    complemento
   ) {
     (this.nome = nome),
       (this.cpf = cpf),
@@ -26,7 +27,8 @@ class Client {
       (this.estado = estado),
       (this.cep = cep),
       (this.email = email),
-      (this.idAssinatura = idAssinatura);
+      (this.idAssinatura = idAssinatura),
+      (this.complemento = complemento);
   }
 }
 

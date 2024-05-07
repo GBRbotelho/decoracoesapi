@@ -15,7 +15,8 @@ module.exports = async (clientData, clientRepository) => {
       clientData.estado,
       clientData.cep,
       clientData.email,
-      clientData.idAssinatura
+      clientData.idAssinatura,
+      clientData.complemento
     );
 
     return clientRepository.create(client);

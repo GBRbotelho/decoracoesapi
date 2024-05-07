@@ -53,6 +53,10 @@ const clientSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  complemento: {
+    type: String,
+    required: false,
+  },
 });
 
 const Client = mongoose.model("Client", clientSchema);

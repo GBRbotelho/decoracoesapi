@@ -165,12 +165,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -277,12 +277,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -390,12 +390,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -504,12 +504,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -618,12 +618,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -732,12 +732,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -846,12 +846,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -959,12 +959,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -1072,12 +1072,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
@@ -1185,12 +1185,12 @@ const mpController = {
         cep: dataUser.cep,
         email: payer.email,
         idAssinatura: response.data.id,
+        complemento: dataUser.complemento,
       };
 
       const dataClientMP = {
         address: {
-          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
-          street_number: Number(dataUser.numero),
+          street_name: `${dataUser.rua}, ${dataUser.numero}, ${dataUser.bairro}, ${dataUser.cep}, ${dataUser.complemento}`,
           city: {
             name: `${dataUser.cidade} - ${dataUser.estado}`,
           },
