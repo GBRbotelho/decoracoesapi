@@ -167,8 +167,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
@@ -235,8 +279,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
@@ -304,8 +392,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
@@ -374,13 +506,57 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
@@ -444,8 +620,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
@@ -514,8 +734,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
@@ -584,8 +848,51 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
 
       if (response.data.status === "authorized") {
         return res
@@ -654,8 +961,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
@@ -723,8 +1074,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
@@ -792,8 +1187,52 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
-      const CreatedClient = await CreateClient(dataClient, clientRepository);
-      console.log(CreatedClient);
+      const dataClientMP = {
+        address: {
+          street_name: `${dataUser.rua}, ${dataUser.bairro}, ${dataUser.cep}`,
+          street_number: Number(dataUser.numero),
+          city: {
+            name: `${dataUser.cidade} - ${dataUser.estado}`,
+          },
+        },
+        description: `${response.data.id}`,
+        email: `${dataUser.email}`,
+        first_name: `${dataUser.nome.split(" ")[0]}`,
+        identification: {
+          type: "CPF",
+          number: `${dataUser.cpf}`,
+        },
+        last_name: `${dataUser.nome.split(" ")[1]}`,
+        phone: {
+          area_code: `${dataUser.ddd}`,
+          number: `${dataUser.telefone}`,
+        },
+      };
+
+      try {
+        // Faz a requisição POST para criar a assinatura
+        const responseClient = await axios.post(
+          "https://api.mercadopago.com/v1/customers",
+          dataClientMP,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${mercadoPagoAccessToken}`,
+            },
+          }
+        );
+        console.log("Cliente Criado Mercado Pago");
+      } catch (error) {
+        console.error("Erro ao criar cliente:", error);
+      }
+
+      try {
+        const CreatedClient = await CreateClient(dataClient, clientRepository);
+        console.log(CreatedClient);
+      } catch (error) {
+        console.error("Erro ao criar cliente no banco de dados:", error);
+      }
+
       if (response.data.status === "authorized") {
         return res
           .status(200)
