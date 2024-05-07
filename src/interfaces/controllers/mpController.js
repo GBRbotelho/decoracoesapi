@@ -802,13 +802,13 @@ const mpController = {
         idAssinatura: response.data.id,
       };
 
+      const CreatedClient = await CreateClient(dataClient, clientRepository);
+      console.log(CreatedClient);
       if (response.data.status === "authorized") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "authorized", data: response.data });
       } else if (response.data.status === "pending") {
-        const CreatedClient = CreateClient(dataClient, clientRepository);
         return res
           .status(200)
           .json({ success: "YES", status: "pending", data: response.data });
