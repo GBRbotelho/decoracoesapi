@@ -19,6 +19,8 @@ module.exports = async (clientData, clientRepository) => {
       clientData.complemento
     );
 
+    console.log("Criando Cliente no DB");
+
     return clientRepository.create(client);
   } catch (error) {
     throw { message: error.message || "Failed to Create client" };
