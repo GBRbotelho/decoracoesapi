@@ -176,7 +176,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -288,7 +288,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -401,7 +401,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -515,7 +515,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -629,7 +629,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -743,7 +743,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -857,7 +857,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -970,7 +970,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -1083,7 +1083,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
@@ -1196,7 +1196,7 @@ const mpController = {
           },
         },
         description: `${response.data.id}`,
-        email: `${dataUser.email}`,
+        email: `${payer.email}`,
         first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
