@@ -177,12 +177,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -289,12 +289,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -402,12 +402,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -516,12 +516,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -630,12 +630,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -744,12 +744,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -858,12 +858,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -971,12 +971,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -1084,12 +1084,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
@@ -1197,12 +1197,12 @@ const mpController = {
         },
         description: `${response.data.id}`,
         email: `${dataUser.email}`,
-        first_name: `${dataUser.nome.split(" ")[0]}`,
+        first_name: `${dataUser.nome}`,
         identification: {
           type: "CPF",
           number: `${dataUser.cpf}`,
         },
-        last_name: `${dataUser.nome.split(" ")[1]}`,
+        last_name: `${dataUser.sobrenome}`,
         phone: {
           area_code: `${dataUser.ddd}`,
           number: `${dataUser.telefone}`,
