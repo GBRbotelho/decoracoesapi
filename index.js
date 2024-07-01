@@ -19,8 +19,7 @@ app.use(routes);
 
 // Config Mongo
 const connectToMongoDB = require("./src/infrastructure/database/mongoConfig");
-connectToMongoDB();
-
+//connectToMongoDB();
 //Server
 app.use(express.json());
 
