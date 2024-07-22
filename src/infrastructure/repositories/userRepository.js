@@ -19,7 +19,7 @@ module.exports = {
   },
   async find(userData) {
     try {
-      const users = await User.findOne(userData);
+      const users = await User.findOne({ where: userData });
       return users;
     } catch (error) {
       throw new Error(`Erro ao encontrar usuários: ${error}`);

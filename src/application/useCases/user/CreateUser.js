@@ -9,12 +9,11 @@ const creater = async (data) => {
 
     const emailExist = await repository.find({ email: user.email });
 
-    if (emailExist[0]) {
+    if (emailExist) {
       return { success: false, message: "Email ja utilizado" };
     }
 
     const response = await repository.create(user);
-
     return {
       success: true,
       message: "Usuario criado com sucesso",

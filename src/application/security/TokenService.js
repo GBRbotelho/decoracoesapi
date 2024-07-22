@@ -15,8 +15,15 @@ const TokenService = {
 
   verify(token) {
     try {
-      jwt.verify(token, secret);
-      return true;
+      return jwt.verify(token, secret);
+    } catch (err) {
+      return false;
+    }
+  },
+
+  decode(token) {
+    try {
+      return jwt.decode(token, secret, (algorithms = ["HS256"]));
     } catch (err) {
       return false;
     }
