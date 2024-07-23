@@ -1,5 +1,6 @@
 const express = require("express");
 const clientsRoutes = require("./clientsRoutes");
+const addressRoutes = require("./addressRoutes");
 const mpRoutes = require("./mpRoutes");
 const usersRoutes = require("./usersRoutes");
 
@@ -10,6 +11,7 @@ router.get("/", (req, res) => {
 });
 
 router.use("/clients", clientsRoutes);
+router.use("/address", addressRoutes);
 router.use("/users", usersRoutes);
 router.use("/mp", mpRoutes);
 
