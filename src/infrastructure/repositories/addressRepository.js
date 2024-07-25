@@ -18,4 +18,12 @@ module.exports = {
       throw new Error(`Erro ao encontrar endereços: ${error}`);
     }
   },
+  async find(addressData) {
+    try {
+      const address = await Address.findOne({ where: addressData });
+      return address;
+    } catch (error) {
+      throw new Error(`Erro ao encontrar endereço: ${error}`);
+    }
+  },
 };

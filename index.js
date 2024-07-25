@@ -3,6 +3,7 @@ const express = require("express");
 const sequelize = require("./src/infrastructure/database/mariaDBConfig");
 const User = require("./src/infrastructure/database/models/UserModel");
 const Address = require("./src/infrastructure/database/models/AddressModel");
+const Subscription = require("./src/infrastructure/database/models/SubscriptionModel");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -20,9 +21,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const routes = require("./src/interfaces/routes/routes");
 app.use(routes);
 
-// Config Mongo
-const connectToMongoDB = require("./src/infrastructure/database/mongoConfig");
-connectToMongoDB();
+// // Config Mongo
+// const connectToMongoDB = require("./src/infrastructure/database/mongoConfig");
+// connectToMongoDB();
 
 //Server
 app.use(express.json());
@@ -33,7 +34,7 @@ sequelize
     console.log("Tabelas sincronizadas com sucesso!");
     // Inicia o servidor após sincronizar as tabelas
     app.listen(3000, () => {
-      console.log("Servidor rodando na porta 3050");
+      console.log("Servidor rodando na porta 3000");
     });
   })
   .catch((err) => {

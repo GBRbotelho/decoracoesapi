@@ -35,6 +35,7 @@ const userController = {
       res.status(500).json("Erro interno do servidor");
     }
   },
+
   async dataToken(req, res) {
     try {
       const token = req.headers.authorization;
