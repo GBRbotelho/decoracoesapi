@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 router.use("/clients", clientsRoutes);
 router.use("/address", addressRoutes);
 router.use("/users", usersRoutes);
-router.use("/subscriptions", usersRoutes);
+router.use("/subscriptions", subscriptionsRoutes);
 router.use("/mp", mpRoutes);
 
 module.exports = router;

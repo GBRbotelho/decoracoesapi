@@ -1,39 +1,19 @@
-const CreateAddress = require("../../application/useCases/address/CreateAddress");
-const FindAll = require("../../application/useCases/address/FindAll");
+const FindAllSubscriptions = require("../../application/useCases/subscription/FindAllSubscriptions");
 
-const addressController = {
-  async create(req, res) {
-    try {
-      const data = req.body;
-
-      const created = await CreateAddress(data);
-
-      if (created.success) {
-        res.status(200).json(created);
-      } else {
-        res.status(404).json(created);
-      }
-    } catch (error) {
-      console.error("Erro ao criar Endereço:", error);
-      res.status(500).json("Erro interno do servidor");
-    }
-  },
+const subscriptionController = {
   async findAll(req, res) {
     try {
-      const data = req.body;
+      const subscriptions = await FindAllSubscriptions();
 
-      const finded = await FindAll(data);
-
-      if (finded.success) {
-        res.status(200).json(finded);
+      if (subscriptions.success) {
+        return res.status(200).json(subscriptions);
       } else {
-        res.status(404).json(finded);
+        res.status(404).json(subscriptions);
       }
     } catch (error) {
-      console.error("Erro ao resgatar Endereços:", error);
-      res.status(500).json("Erro interno do servidor");
+      return res.status(500).json({ error: error.message });
     }
   },
 };
 
-module.exports = addressController;
+module.exports = subscriptionController;

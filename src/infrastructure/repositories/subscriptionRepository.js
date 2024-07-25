@@ -9,14 +9,12 @@ module.exports = {
       throw new Error(`Erro ao criar endereço: ${error}`);
     }
   },
-  async findAll(subscriptionData) {
+  async findAll() {
     try {
-      const subscription = await Subscription.findAll({
-        where: subscriptionData,
-      });
-      return subscription;
+      const users = await Subscription.findAll();
+      return users;
     } catch (error) {
-      throw new Error(`Erro ao encontrar endereços: ${error}`);
+      throw new Error(`Erro ao encontrar usuários: ${error}`);
     }
   },
   async find(subscriptionData) {

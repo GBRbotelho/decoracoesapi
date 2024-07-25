@@ -1,6 +1,7 @@
 const CreateUser = require("../../application/useCases/user/CreateUser");
 const AuthenticateUser = require("../../application/useCases/user/AuthenticateUser");
 const DataToken = require("../../application/useCases/user/DataToken");
+const FindAllUsers = require("../../application/useCases/user/FindAllUsers");
 
 const userController = {
   async create(req, res) {
@@ -45,7 +46,20 @@ const userController = {
       if (userData.success) {
         return res.status(200).json(userData);
       } else {
-        res.status(404).json(authenticated);
+        res.status(404).json(userData);
+      }
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  },
+  async findAll(req, res) {
+    try {
+      const users = await FindAllUsers();
+
+      if (users.success) {
+        return res.status(200).json(users);
+      } else {
+        res.status(404).json(users);
       }
     } catch (error) {
       return res.status(500).json({ error: error.message });
