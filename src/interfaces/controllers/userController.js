@@ -2,6 +2,7 @@ const CreateUser = require("../../application/useCases/user/CreateUser");
 const AuthenticateUser = require("../../application/useCases/user/AuthenticateUser");
 const DataToken = require("../../application/useCases/user/DataToken");
 const FindAllUsers = require("../../application/useCases/user/FindAllUsers");
+const FindUser = require("../../application/useCases/user/FindUser");
 
 const userController = {
   async create(req, res) {
@@ -55,6 +56,20 @@ const userController = {
   async findAll(req, res) {
     try {
       const users = await FindAllUsers();
+
+      if (users.success) {
+        return res.status(200).json(users);
+      } else {
+        res.status(404).json(users);
+      }
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  },
+  async find(req, res) {
+    try {
+      const { id } = req.params;
+      const users = await FindUser(id);
 
       if (users.success) {
         return res.status(200).json(users);

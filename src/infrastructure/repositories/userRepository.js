@@ -9,9 +9,9 @@ module.exports = {
       throw new Error(`Erro ao criar usuário: ${error}`);
     }
   },
-  async findAll() {
+  async findAll(userData) {
     try {
-      const users = await User.findAll();
+      const users = await User.findAll({ where: userData });
       return users;
     } catch (error) {
       throw new Error(`Erro ao encontrar usuários: ${error}`);

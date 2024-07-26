@@ -3,6 +3,8 @@ class Subscription {
     this.id = props?.id;
     this.idSubscription = props?.idSubscription || "";
     this.userId = props?.userId;
+    this.planName = props?.planName || 0;
+    this.planPrice = props?.planPrice || 0;
     this.street = props?.street || "";
     this.district = props?.district || "";
     this.number = props?.number || "";

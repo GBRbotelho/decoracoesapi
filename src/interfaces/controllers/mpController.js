@@ -166,6 +166,8 @@ const mpController = {
         const dataSubscription = {
           userId: dataUser.id,
           idSubscription: response.data.id,
+          planName: plan.reason,
+          planPrice: plan["auto_recurring"]["transaction_amount"],
           street: dataAddress.street,
           district: dataAddress.district,
           number: dataAddress.number,

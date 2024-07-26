@@ -10,6 +10,12 @@ const Subscription = sequelize.define("Subscription", {
   idSubscription: {
     type: DataTypes.STRING,
   },
+  planName: {
+    type: DataTypes.STRING,
+  },
+  planPrice: {
+    type: DataTypes.INTEGER,
+  },
   userId: {
     type: DataTypes.INTEGER,
     allowNull: false,

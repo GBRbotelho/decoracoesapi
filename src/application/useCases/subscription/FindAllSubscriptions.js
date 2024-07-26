@@ -5,7 +5,6 @@ const findAll = async () => {
   try {
     const response = await repository.findAll();
     const responseUser = await userRepository.findAll();
-
     const subscriptions = response.map((subscription) => {
       const user = responseUser.find((user) => user.id === subscription.userId);
 

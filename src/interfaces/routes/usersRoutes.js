@@ -6,5 +6,6 @@ router.post("/", userController.create);
 router.post("/authenticate", userController.authenticate);
 router.get("/token", userController.dataToken);
 router.get("/", userController.findAll);
+router.get("/:id", userController.find);
 
 module.exports = router;
