@@ -22,21 +22,21 @@ const routes = require("./src/interfaces/routes/routes");
 app.use(routes);
 
 // // Config Mongo
-// const connectToMongoDB = require("./src/infrastructure/database/mongoConfig");
-// connectToMongoDB();
+const connectToMongoDB = require("./src/infrastructure/database/mongoConfig");
+connectToMongoDB();
 
 //Server
 app.use(express.json());
 
-sequelize
-  .sync()
-  .then(() => {
-    console.log("Tabelas sincronizadas com sucesso!");
-    // Inicia o servidor após sincronizar as tabelas
-    app.listen(3000, () => {
-      console.log("Servidor rodando na porta 3000");
-    });
-  })
-  .catch((err) => {
-    console.error("Erro ao sincronizar as tabelas:", err);
-  });
+// sequelize
+//   .sync()
+//   .then(() => {
+// console.log("Tabelas sincronizadas com sucesso!");
+// Inicia o servidor após sincronizar as tabelas
+app.listen(3000, () => {
+  console.log("Servidor rodando na porta 3000");
+});
+// })
+// .catch((err) => {
+//   console.error("Erro ao sincronizar as tabelas:", err);
+// });

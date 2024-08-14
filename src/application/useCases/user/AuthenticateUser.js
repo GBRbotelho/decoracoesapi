@@ -4,7 +4,6 @@ const TokenService = require("../../security/TokenService");
 
 const authenticate = async (data) => {
   const user = await repository.find({ email: data.email });
-
   if (!user) {
     return { success: false, message: "Usuario ou senha invalido!" };
   }
@@ -13,6 +12,7 @@ const authenticate = async (data) => {
   if (!isValid) {
     return { success: false, message: "Usuario ou senha invalido!" };
   }
+
   const token = TokenService.create({
     id: user.id,
   });

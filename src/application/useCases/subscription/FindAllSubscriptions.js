@@ -6,9 +6,10 @@ const findAll = async () => {
     const response = await repository.findAll();
     const responseUser = await userRepository.findAll();
     const subscriptions = response.map((subscription) => {
-      const user = responseUser.find((user) => user.id === subscription.userId);
-
-      return { ...subscription, userId: user };
+      const user = responseUser.find((user) => {
+        return user.id.toString() === subscription.userId;
+      });
+      return { ...subscription, user: user };
     });
 
     return {

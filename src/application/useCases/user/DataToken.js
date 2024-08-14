@@ -12,12 +12,12 @@ const DataToken = async (token) => {
       return { success: false, message: "Token Invalido" };
     }
     const tokenDecoded = TokenService.decode(token.replace("Bearer ", ""));
-    const user = await repository.find({ id: tokenDecoded.id });
-
+    let user = await repository.find({ id: tokenDecoded.id });
+    user.password = "";
     return {
       success: true,
       message: "Token Valido",
-      data: { ...user, password: "" },
+      data: user,
     };
   } catch (error) {
     return null;
