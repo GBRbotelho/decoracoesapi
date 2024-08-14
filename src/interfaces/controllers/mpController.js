@@ -151,23 +151,16 @@ const mpController = {
       };
 
       // Faz a requisição POST para criar a assinatura
-      // const response = await axios.post(
-      //   "https://api.mercadopago.com/preapproval",
-      //   data,
-      //   {
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //       Authorization: `Bearer ${mercadoPagoAccessToken}`,
-      //     },
-      //   }
-      // );
-
-      const response = {
-        data: {
-          id: "1",
-          status: "authorized",
-        },
-      };
+      const response = await axios.post(
+        "https://api.mercadopago.com/preapproval",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${mercadoPagoAccessToken}`,
+          },
+        }
+      );
 
       if (response.data) {
         const dataSubscription = {
