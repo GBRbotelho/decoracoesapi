@@ -1,9 +1,9 @@
 require("dotenv").config();
 const express = require("express");
-const sequelize = require("./src/infrastructure/database/mariaDBConfig");
-const User = require("./src/infrastructure/database/models/UserModel");
-const Address = require("./src/infrastructure/database/models/AddressModel");
-const Subscription = require("./src/infrastructure/database/models/SubscriptionModel");
+// const sequelize = require("./src/infrastructure/database/mariaDBConfig");
+// const User = require("./src/infrastructure/database/models/UserModel");
+// const Address = require("./src/infrastructure/database/models/AddressModel");
+// const Subscription = require("./src/infrastructure/database/models/SubscriptionModel");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
