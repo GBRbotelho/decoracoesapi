@@ -31,8 +31,12 @@ module.exports = {
       const dataObj = { ...userData, _id: userData.id, id: "" };
       let users = await User.findOne(removeEmptyProperties(dataObj));
 
-      const { _id, ...rest } = users.toObject();
-      return { id: _id, ...rest };
+      if (users) {
+        const { _id, ...rest } = users.toObject();
+        return { id: _id, ...rest };
+      } else {
+        return null;
+      }
     } catch (error) {
       throw new Error(`Erro ao encontrar usuários: ${error}`);
     }
