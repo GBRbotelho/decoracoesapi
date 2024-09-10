@@ -1,5 +1,7 @@
 const TokenService = require("../../security/TokenService");
 const repository = require("../../../infrastructure/repositories/userRepository");
+const SubscriptionRepository = require("../../../infrastructure/repositories/subscriptionRepository");
+const subscriptionRepository = require("../../../infrastructure/repositories/subscriptionRepository");
 
 const DataToken = async (token) => {
   try {
@@ -13,6 +15,13 @@ const DataToken = async (token) => {
     }
     const tokenDecoded = TokenService.decode(token.replace("Bearer ", ""));
     let user = await repository.find({ id: tokenDecoded.id });
+
+    const subscriptions = await subscriptionRepository.findAll({
+      userId: user.id,
+    });
+    if (subscriptions) {
+      user.subscriptions = subscriptions;
+    }
     user.password = "";
     return {
       success: true,
