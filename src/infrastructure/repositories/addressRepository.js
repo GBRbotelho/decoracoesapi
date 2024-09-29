@@ -68,4 +68,21 @@ module.exports = {
       throw new Error(`Erro ao encontrar endereço: ${error}`);
     }
   },
+  async update(addressData) {
+    try {
+      const { id, ...updateData } = addressData;
+      const updatedAddress = await Address.findByIdAndUpdate(id, updateData, {
+        new: true,
+      });
+
+      if (!updatedAddress) {
+        throw new Error(`Endereço não encontrado com o id: ${id}`);
+      }
+
+      const { _id, ...rest } = updatedAddress.toObject();
+      return { id: _id, ...rest };
+    } catch (error) {
+      throw new Error(`Erro ao atualizar endereço: ${error}`);
+    }
+  },
 };
