@@ -1,6 +1,7 @@
 const CreateAddress = require("../../application/useCases/address/CreateAddress");
 const FindAll = require("../../application/useCases/address/FindAll");
 const UpdateAddress = require("../../application/useCases/address/UpdateAddress");
+const DeleteAddress = require("../../application/useCases/address/DeleteAddress");
 
 const addressController = {
   async create(req, res) {
@@ -48,6 +49,22 @@ const addressController = {
       }
     } catch (error) {
       console.error("Erro ao atualizar Endereço:", error);
+      res.status(500).json("Erro interno do servidor");
+    }
+  },
+  async delete(req, res) {
+    try {
+      const data = req.body;
+
+      const deleted = await DeleteAddress(data);
+
+      if (deleted.success) {
+        res.status(200).json(deleted);
+      } else {
+        res.status(404).json(deleted);
+      }
+    } catch (error) {
+      console.error("Erro ao deletar Endereço:", error);
       res.status(500).json("Erro interno do servidor");
     }
   },

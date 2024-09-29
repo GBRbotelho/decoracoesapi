@@ -85,4 +85,18 @@ module.exports = {
       throw new Error(`Erro ao atualizar endereço: ${error}`);
     }
   },
+  async delete(addressData) {
+    try {
+      const { id } = addressData;
+      const deletedAddress = await Address.findByIdAndDelete(id);
+
+      if (!deletedAddress) {
+        throw new Error(`Endereço não encontrado com o id: ${id}`);
+      }
+
+      return { success: true, message: "Endereço deletado com sucesso", id }; // Retorna mensagem de sucesso
+    } catch (error) {
+      throw new Error(`Erro ao deletar endereço: ${error}`);
+    }
+  },
 };
