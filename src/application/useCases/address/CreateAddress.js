@@ -3,6 +3,7 @@ const repository = require("../../../infrastructure/repositories/addressReposito
 
 const creater = async (data) => {
   try {
+    console.log("Passou");
     const address = new Address(data);
 
     const response = await repository.create(address);

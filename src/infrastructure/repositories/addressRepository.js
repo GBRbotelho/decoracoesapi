@@ -34,7 +34,8 @@ const removeEmptyProperties = require("../../utils/utils");
 module.exports = {
   async create(addressData) {
     try {
-      const newAddress = await Address.create(addressData);
+      const { id, ...createData } = addressData;
+      const newAddress = await Address.create(createData);
       const address = { ...newAddress, id: newAddress._id };
       return address;
     } catch (error) {
